@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Program de nutriție pentru sportivi +18 · PCL Divizia Performanță</title>
+<meta name="description" content="Opt săptămâni după care știi singur ce să mănânci. 200 de euro, maximum 20 de locuri. PCL Divizia Performanță.">
+<meta name="theme-color" content="#160D30">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mov:#5C1EFA;
+  --mov-inchis:#4A14D6;
+  --cyan:#F6B84B;   /* accent seniori: auriu */
+  --auriu:#F6B84B;
+  --noapte:#160D30;
+  --noapte-2:#1E1240;
+  --hartie:#FFFFFF;
+  --hartie-2:#F5F2FF;
+  --linie:rgba(22,13,48,.12);
+  --linie-tare:rgba(22,13,48,.22);
+  --text:#160D30;
+  --text-2:rgba(22,13,48,.68);
+  --text-3:rgba(22,13,48,.5);
+  --alb-2:rgba(255,255,255,.76);
+  --alb-3:rgba(255,255,255,.55);
+}
+*,*::before,*::after{box-sizing:border-box;}
+html,body{max-width:100%;overflow-x:hidden;}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--hartie);
+  color:var(--text);
+  font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:17px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  font-synthesis-weight:none;
+  overflow-wrap:break-word;
+}
+img,svg{max-width:100%;height:auto;display:block;}
+p{margin:0 0 1em;max-width:45ch;}
+p:last-child{margin-bottom:0;}
+h1,h2,h3,h4{font-family:Fraunces,Georgia,serif;font-weight:600;margin:0;line-height:1.18;letter-spacing:-.01em;}
+a{color:inherit;}
+strong{font-weight:700;}
+
+.zona{padding:0 20px;}
+.container{width:100%;max-width:640px;margin:0 auto;}
+
+/* ---------- cap ---------- */
+.cap{
+  background:var(--noapte);
+  color:#fff;
+  padding:14px 20px;
+  border-bottom:1px solid rgba(246,184,75,.22);
+}
+.cap-in{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+.marca{font-family:Fraunces,Georgia,serif;font-size:15px;font-weight:600;letter-spacing:.01em;}
+.marca span{color:var(--cyan);}
+.marca-sub{
+  font-size:11px;text-transform:uppercase;letter-spacing:.14em;font-weight:700;
+  color:var(--cyan);
+}
+
+/* ---------- hero ---------- */
+.hero{
+  background:var(--noapte);
+  color:#fff;
+  padding:34px 20px 38px;
+}
+.eyebrow{
+  font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.16em;
+  color:var(--cyan);margin:0 0 16px;
+}
+.hero h1{
+  font-size:clamp(1.7rem,7.6vw,2.55rem);
+  font-weight:600;
+  color:#fff;
+  margin:0 0 18px;
+  letter-spacing:-.02em;
+}
+.hero h1 em{font-style:normal;color:var(--cyan);}
+.hero-lede{color:var(--alb-2);font-size:17px;max-width:42ch;margin:0 0 24px;}
+
+.fapte{
+  list-style:none;margin:0 0 26px;padding:18px 0 0;
+  border-top:1px solid rgba(255,255,255,.16);
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 12px;
+}
+.fapte div{min-width:0;}
+.fapte dt{
+  font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:700;
+  color:var(--alb-3);margin:0 0 4px;
+}
+.fapte dd{margin:0;font-family:Fraunces,Georgia,serif;font-size:19px;font-weight:600;color:#fff;}
+
+.btn{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  width:100%;min-height:56px;padding:15px 18px;
+  border-radius:14px;text-decoration:none;
+  font-weight:700;font-size:17px;letter-spacing:.005em;
+  background:var(--cyan);color:var(--noapte);
+  border:1px solid var(--cyan);
+  text-align:center;
+}
+.btn-2{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.34);}
+.btn-mov{background:var(--mov);color:#fff;border-color:var(--mov);}
+.btn+.btn{margin-top:10px;}
+.sub-btn{font-size:13.5px;color:var(--alb-3);margin:12px 0 0;text-align:center;max-width:none;}
+
+/* ---------- start (placeholder) ---------- */
+.start-linie{
+  margin:22px 0 0;padding:14px 16px;
+  border:1px dashed rgba(246,184,75,.45);border-radius:12px;
+  background:rgba(246,184,75,.07);
+  font-size:14.5px;color:var(--alb-2);max-width:none;
+}
+.start-linie b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:var(--cyan);margin-bottom:4px;}
+#DATA-START{color:#fff;font-weight:700;}
+
+/* ---------- sectiuni ---------- */
+section{padding:38px 20px;border-top:1px solid var(--linie);}
+section:first-of-type{border-top:0;}
+.numar{
+  display:flex;align-items:center;gap:10px;
+  font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;
+  color:var(--mov);margin:0 0 12px;
+}
+.numar i{font-style:normal;color:var(--text-3);font-variant-numeric:tabular-nums;}
+.numar::after{content:"";flex:1;height:1px;background:var(--linie);min-width:16px;}
+h2{font-size:clamp(1.45rem,5.6vw,1.9rem);margin:0 0 14px;}
+.intro{color:var(--text-2);font-size:17px;}
+
+/* rezumat */
+.rezumat{background:var(--hartie-2);border-radius:16px;padding:20px;margin:0;}
+.rezumat p{font-size:17.5px;max-width:42ch;}
+.rezumat p:first-child{font-family:Fraunces,Georgia,serif;font-size:19px;line-height:1.4;font-weight:600;}
+
+/* liste motive */
+.motive{list-style:none;margin:0;padding:0;}
+.motive li{padding:16px 0;border-bottom:1px solid var(--linie);}
+.motive li:first-child{padding-top:0;}
+.motive li:last-child{border-bottom:0;padding-bottom:0;}
+.motive h3{font-size:18px;margin:0 0 5px;}
+.motive p{color:var(--text-2);font-size:16px;margin:0;}
+
+/* traseu 8 saptamani */
+.traseu{list-style:none;margin:0;padding:0;}
+.traseu>li{
+  position:relative;padding:0 0 26px 26px;border-left:2px solid var(--linie);
+}
+.traseu>li:last-child{border-left-color:transparent;padding-bottom:0;}
+.traseu>li::before{
+  content:"";position:absolute;left:-7px;top:5px;
+  width:12px;height:12px;border-radius:50%;
+  background:var(--mov);border:3px solid var(--hartie);
+}
+.traseu>li.pas-ultim::before{background:var(--cyan);}
+.eticheta-pas{
+  font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.13em;
+  color:var(--text-3);margin:0 0 4px;
+}
+.traseu h3{font-size:18.5px;margin:0 0 6px;}
+.traseu p{color:var(--text-2);font-size:16px;margin:0;}
+.master{
+  margin-top:12px;padding:14px 15px;border-radius:12px;
+  background:rgba(246,184,75,.13);border:1px solid rgba(246,184,75,.4);
+}
+.master span{
+  display:block;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;
+  color:var(--mov-inchis);margin-bottom:4px;
+}
+.master b{display:block;font-family:Fraunces,Georgia,serif;font-size:17px;font-weight:600;margin-bottom:3px;}
+.master p{font-size:15px;color:var(--text-2);margin:0;}
+
+/* instrumente */
+.unelte{list-style:none;margin:0;padding:0;counter-reset:u;}
+.unelte li{
+  border:1px solid var(--linie);border-radius:16px;padding:18px;margin-bottom:12px;
+}
+.unelte li:last-child{margin-bottom:0;}
+.unelte h3{font-size:18px;margin:0 0 6px;display:flex;gap:9px;align-items:baseline;}
+.unelte h3::before{
+  counter-increment:u;content:counter(u);
+  font-family:"Plus Jakarta Sans",sans-serif;font-size:12px;font-weight:700;
+  color:var(--mov);flex:0 0 auto;
+}
+.unelte p{color:var(--text-2);font-size:16px;margin:0 0 10px;}
+.ramane{
+  display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;
+  color:var(--mov-inchis);background:var(--hartie-2);border-radius:999px;padding:5px 10px;
+}
+
+/* bife */
+.bife{list-style:none;margin:0;padding:0;}
+.bife li{
+  display:flex;gap:11px;align-items:flex-start;
+  padding:12px 0;border-bottom:1px solid var(--linie);font-size:16.5px;
+}
+.bife li:last-child{border-bottom:0;}
+.bife li::before{
+  content:"";flex:0 0 auto;margin-top:6px;
+  width:9px;height:9px;border-radius:2px;background:var(--cyan);
+}
+.bife li b{font-weight:600;}
+.bife li i{font-style:normal;display:block;color:var(--text-3);font-size:14.5px;}
+
+/* registru */
+.registru{
+  background:var(--noapte-2);color:#fff;border-radius:18px;padding:24px 20px;
+}
+.registru h2{color:#fff;}
+.registru p{color:var(--alb-2);}
+.registru .numar{color:var(--cyan);}
+.registru .numar i{color:var(--alb-3);}
+.registru .numar::after{background:rgba(255,255,255,.18);}
+.citat{
+  margin:18px 0 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.18);
+  font-family:Fraunces,Georgia,serif;font-size:19px;line-height:1.4;color:var(--cyan);
+  max-width:30ch;
+}
+
+/* pret */
+.pret-cutie{border:2px solid var(--noapte);border-radius:18px;overflow:hidden;}
+.pret-sus{padding:22px 20px;border-bottom:1px solid var(--linie);}
+.pret-cifra{
+  font-family:Fraunces,Georgia,serif;font-size:clamp(2.6rem,14vw,3.6rem);
+  font-weight:600;line-height:1;letter-spacing:-.03em;margin:0;
+}
+.pret-cifra small{font-size:.32em;font-weight:600;letter-spacing:0;margin-left:6px;}
+.pret-sub{margin:8px 0 0;color:var(--text-2);font-size:16px;}
+.pret-jos{padding:20px;background:var(--hartie-2);}
+.pret-jos h3{margin:0 0 12px;font-family:"Plus Jakarta Sans",sans-serif;font-weight:700;font-size:11.5px;text-transform:uppercase;letter-spacing:.12em;color:var(--text-3);}
+.locuri{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:16px 0 0;
+}
+.locuri div{border:1px solid var(--linie);border-radius:12px;padding:12px;background:var(--hartie);}
+.locuri dt{font-size:11px;text-transform:uppercase;letter-spacing:.11em;font-weight:700;color:var(--text-3);margin-bottom:3px;}
+.locuri dd{margin:0;font-family:Fraunces,Georgia,serif;font-size:17px;font-weight:600;}
+
+/* faq */
+details{border-bottom:1px solid var(--linie);}
+details:first-of-type{border-top:1px solid var(--linie);}
+summary{
+  list-style:none;cursor:pointer;
+  padding:16px 34px 16px 0;position:relative;
+  font-weight:600;font-size:16.5px;min-height:44px;
+  display:flex;align-items:center;
+}
+summary::-webkit-details-marker{display:none;}
+summary::after{
+  content:"";position:absolute;right:6px;top:50%;
+  width:10px;height:10px;margin-top:-6px;
+  border-right:2px solid var(--mov);border-bottom:2px solid var(--mov);
+  transform:rotate(45deg);transition:transform .18s ease;
+}
+details[open] summary::after{transform:rotate(-135deg);margin-top:-2px;}
+details p{padding:0 0 16px;color:var(--text-2);font-size:16px;}
+
+/* despre */
+.despre{background:var(--hartie-2);border-radius:16px;padding:20px;}
+.despre h3{font-size:18px;margin:0 0 8px;}
+.despre p{color:var(--text-2);font-size:16px;}
+
+/* final */
+.final{background:var(--noapte);color:#fff;padding:38px 20px 30px;border-top:0;}
+.final h2{color:#fff;font-size:clamp(1.5rem,6vw,2rem);margin-bottom:12px;}
+.final p{color:var(--alb-2);}
+.final .numar{color:var(--cyan);}
+.final .numar i{color:var(--alb-3);}
+.final .numar::after{background:rgba(255,255,255,.18);}
+.footer{
+  margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,255,255,.16);
+  font-size:13px;color:var(--alb-3);max-width:none;
+}
+.footer a{color:var(--cyan);text-decoration:none;}
+
+@media (min-width:700px){
+  body{font-size:18px;}
+  .zona,section,.hero,.cap,.final{padding-left:32px;padding-right:32px;}
+  .hero{padding-top:56px;padding-bottom:56px;}
+  section{padding-top:56px;padding-bottom:56px;}
+  .hero .container,.cap-in,section>.container,.final .container{max-width:640px;margin:0 auto;}
+  .fapte{grid-template-columns:repeat(4,minmax(0,1fr));}
+  .btn{width:auto;min-width:280px;padding-left:32px;padding-right:32px;}
+  .btn+.btn{margin-top:0;}
+  .butoane{display:flex;gap:12px;flex-wrap:wrap;}
+  .sub-btn{text-align:left;}
+  .locuri{grid-template-columns:repeat(3,minmax(0,1fr));}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  *,*::before,*::after{transition-duration:.001ms!important;animation-duration:.001ms!important;}
+}
+
+/* ---------- bara fixa de jos ---------- */
+.bara{
+  position:fixed;left:0;right:0;bottom:0;z-index:50;
+  background:rgba(22,13,48,.94);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  border-top:1px solid rgba(246,184,75,.28);
+  padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+}
+.bara a{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  min-height:52px;border-radius:13px;text-decoration:none;
+  background:var(--cyan);color:var(--noapte);font-weight:700;font-size:16.5px;
+}
+body{padding-bottom:88px;}
+@media (min-width:720px){ .bara{display:none;} body{padding-bottom:0;} }
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
+
+/* ---------- card pe scurt ---------- */
+.scurt-sec{background:var(--hartie-2);}
+.scurt{background:#fff;border:1px solid var(--linie);border-left:3px solid var(--cyan);
+  border-radius:16px;padding:22px 20px;}
+.scurt h2{font-size:20px;margin:0 0 14px;}
+.scurt dl{margin:0;}
+.scurt dl>div{display:flex;gap:14px;align-items:baseline;padding:11px 0;border-top:1px solid var(--linie);}
+.scurt dl>div:first-child{border-top:0;padding-top:0;}
+.scurt dt{flex:0 0 84px;font-size:11px;text-transform:uppercase;letter-spacing:.1em;
+  font-weight:700;color:var(--text-3);}
+.scurt dd{margin:0;flex:1 1 auto;font-size:15.5px;color:var(--text-2);}
+.scurt dd b{color:var(--text);}
+
+.unelte .mini{list-style:none;margin:0 0 12px;padding:0;}
+.unelte .mini li{border:0;border-radius:0;padding:7px 0 7px 18px;margin:0;position:relative;
+  font-size:15.5px;line-height:1.5;color:var(--text-2);border-top:1px solid var(--linie);}
+.unelte .mini li:first-child{border-top:0;}
+.unelte .mini li::before{content:"";position:absolute;left:2px;top:15px;width:6px;height:6px;
+  border-radius:50%;background:var(--cyan);}
+.unelte .mini li b{color:var(--text);font-weight:700;}
+.unelte .mini-nota{font-size:15px;color:var(--text-2);font-style:italic;margin:0 0 10px;}
+</style>
+</head>
+<body>
+
+<header class="cap">
+  <div class="cap-in container">
+    <div class="marca">PCL <span>·</span> Divizia Performanță</div>
+    <div class="marca-sub">Seniori +18</div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="container">
+    <p class="eyebrow">8 săptămâni de nutriție pentru sportivi +18</p>
+    <h1>La final nu mai ai nevoie de mine <em>ca să știi ce să mănânci.</em></h1>
+    <p class="hero-lede">Fără diete. Fără cântar de bucătărie. Înveți să îți faci singur farfuria, ca să reziști tot antrenamentul și să te refaci până la următorul, chiar dacă ai și serviciu.</p>
+
+    <dl class="fapte">
+      <div><dt>Durată</dt><dd>8 săptămâni</dd></div>
+      <div><dt>Cost</dt><dd>200 €</dd></div>
+      <div><dt>Grupa</dt><dd>Max. 20</dd></div>
+      <div><dt>Unde</dt><dd>Online</dd></div>
+    </dl>
+
+    <div class="butoane">
+      <a class="btn" href="https://chat.whatsapp.com/EShE6ytwomaGuFqb94dWLn">Intră în grupul de WhatsApp</a>
+      <a class="btn btn-2" href="#pret">Vezi ce include și cât costă</a>
+    </div>
+
+    <!-- ================================================================= -->
+    <!-- DATA DE START: schimbă doar textul dintre <span id="DATA-START">  -->
+    <!-- ================================================================= -->
+    <p class="start-linie">
+      <b>Grupa începe pe</b>
+      <span id="DATA-START">10 august</span>
+      · înscrierile se închid când se ocupă locurile. Sunt doar 20 pentru că fiecare primește răspuns pe pozele lui, iar asta nu se poate face cu oricâți.
+    </p>
+  </div>
+</div>
+
+
+<section class="scurt-sec">
+  <div class="container">
+    <div class="scurt">
+      <h2>Pe scurt, în 30 de secunde</h2>
+      <dl>
+        <div><dt>Ce este</dt><dd>Opt săptămâni în care înveți cum să mănânci ca să îți susții sportul.</dd></div>
+        <div><dt>Pentru cine</dt><dd>Sportivi de peste 18 ani, orice sport, orice nivel.</dd></div>
+        <div><dt>Cum se ține</dt><dd>Online. Aplicația de sportivi, în care fotografiezi mesele, 4 seminarii live, 2 masterclass cu invitați, grup de WhatsApp.</dd></div>
+        <div><dt>Cât durează pe zi</dt><dd>Câteva minute. Fotografiezi mesele și citești în ritmul tău.</dd></div>
+        <div><dt>Ce rămâne după</dt><dd>Ghidurile, calculatorul și sistemul de mese rămân ale tale. Plus accesul în Registrul Sportivilor.</dd></div>
+        <div><dt>Cât costă</dt><dd><b>200 € pentru tot programul</b>, adică 100 € pe lună.</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <p class="numar"><i>01</i> Ce este, pe scurt</p>
+    <div class="rezumat">
+      <p>Un curs de nutriție pentru sportivi de peste 18 ani. Ține două luni și se face online.</p>
+      <p>Ai 4 întâlniri live, 2 masterclass cu invitați, aplicația de sportivi, în care fotografiezi ce mănânci și 7 ghiduri scrise.</p>
+      <p>Costă 200 de euro în total, adică 100 de euro pe lună.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <p class="numar"><i>02</i> De ce am făcut programul</p>
+    <ul class="motive">
+      <li>
+        <h3>Antrenamentul e jumătate din treabă</h3>
+        <p>Cealaltă jumătate se întâmplă la masă și în somn. Acolo se construiește progresul, nu în sală.</p>
+      </li>
+      <li>
+        <h3>„Mănâncă sănătos” nu înseamnă nimic</h3>
+        <p>E un sfat pe care nimeni nu îl poate aplica. Nimeni nu îți spune cât, când și ce anume.</p>
+      </li>
+      <li>
+        <h3>Ce găsești pe internet e scris pentru altcineva</h3>
+        <p>De obicei vine din America, cu produse care nu există aici și cu porții care nu au sens pentru programul tău.</p>
+      </li>
+      <li>
+        <h3>Mulți vor unu la unu, dar costă</h3>
+        <p>Lucrul individual cu mine înseamnă câteva sute de euro pe lună. Mulți își doresc asta și nu și-o permit, și e cât se poate de normal. De asta am construit programul ăsta: același sistem și aceleași instrumente, doar că în grupă. Pe 200 de euro, pentru două luni, primești mai mult decât ai primi într-o singură lună de lucru individual.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <p class="numar"><i>03</i> Cele 8 săptămâni</p>
+    <h2>Ce se întâmplă, săptămână cu săptămână</h2>
+    <p class="intro">Fiecare modul ține două săptămâni. Se adaugă peste ce a învățat înainte, nu îl ia de la capăt.</p>
+
+    <ol class="traseu">
+      <li>
+        <p class="eticheta-pas">Săptămâna 0</p>
+        <h3>Își află cifrele</h3>
+        <p>Ghidul de pornire, calculatorul pe kilogram de corp și măsurătorile de start. De aici plecăm, ca să vedem la final ce s-a schimbat.</p>
+      </li>
+      <li>
+        <p class="eticheta-pas">Modulul 1 · săptămânile 1 și 2</p>
+        <h3>Farfuria și dimineața</h3>
+        <p>Cum arată o farfurie completă, fără cântar. Și de ce prima masă a zilei decide cum arată antrenamentul de seara.</p>
+      </li>
+      <li>
+        <p class="eticheta-pas">Modulul 2 · săptămânile 3 și 4</p>
+        <h3>Mâncarea din jurul antrenamentului</h3>
+        <p>Ce mănâncă înainte, ce bea în timpul efortului, ce pune în corp în prima oră după. Partea care se vede cel mai repede.</p>
+        <div class="master">
+          <span>Masterclass inclus</span>
+          <b>Alergarea corectă</b>
+          <p>Cu un antrenor de atletism care lucrează la nivel olimpic. Cum se aleargă fără să se rupă genunchii.</p>
+        </div>
+      </li>
+      <li>
+        <p class="eticheta-pas">Modulul 3 · săptămânile 5 și 6</p>
+        <h3>Apa și refacerea</h3>
+        <p>Cât bea într-o zi cu două antrenamente, de ce contează somnul și cum se ridică după un meci greu.</p>
+        <div class="master">
+          <span>Masterclass inclus</span>
+          <b>Corpul: prevenție și mobilitate</b>
+          <p>Cu un kinetoterapeut. Ce face zilnic 10 minute, ca să nu ajungă la accidentare.</p>
+        </div>
+      </li>
+      <li>
+        <p class="eticheta-pas">Modulul 4 · săptămânile 7 și 8</p>
+        <h3>Se descurcă singur</h3>
+        <p>Serviciul și drumul. Ce pui în pachet, ce alegi la prânz între ture, ce mănânci în deplasare. Aici treci de la „mi-a zis cineva” la „știu eu”.</p>
+      </li>
+      <li class="pas-ultim">
+        <p class="eticheta-pas">Final</p>
+        <h3>Absolvirea</h3>
+        <p>Măsurătorile de final, diploma <b>Sportiv Calibrat</b> și intrarea în Registrul Sportivilor.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <p class="numar"><i>04</i> Trei lucruri care rămân ale tale</p>
+    <h2>Nu se închid la finalul celor 8 săptămâni</h2>
+    <p class="intro">Cursul se termină. Instrumentele nu.</p>
+
+    <ul class="unelte">
+      <li>
+        <h3>Calculatorul pe kilogram de corp</h3>
+        <p>Îți spune de câtă mâncare are nevoie corpul tău, la greutatea ta și la sportul tău. Dacă se schimbă greutatea sau volumul de antrenament, îl recalculezi în 30 de secunde.</p>
+        <span class="ramane">Rămâne pe viață</span>
+      </li>
+      <li>
+        <h3>Sistemul „Mese on-the-go”</h3>
+        <p><b>82 de produse reale din magazin</b>, cu poză, preț la zi și valori de pe etichetă. Nu rețete generice, ci exact ce găsești pe raft.</p>
+        <ul class="mini">
+          <li><b>98 de mese gata calculate</b>, cu macro și preț socotite automat, de la 2 lei gustarea până la masa completă</li>
+          <li><b>Planul zilei pe cifrele tale</b>: pui greutatea, sportul și tipul de zi, iar sistemul îți compune ziua întreagă</li>
+          <li><b>Lista de cumpărături</b> se face singură, grupată pe raioane, rotunjită la ambalaje întregi. O deschizi în magazin și cumperi de pe ea</li>
+          <li><b>Șase situații speciale</b>: ziua competiției pe ceas, turneul cu mai multe starturi, antrenamentul de la 7 dimineața, antrenamentul dublu, deplasarea cu autocarul și perioada de accidentare</li>
+          <li><b>Încărcarea cu carbohidrați</b> înainte de competiție, calculată pe kilogramul tău, cu trei variante de a ajunge la țintă</li>
+          <li><b>Constructor de mese</b>: alegi produse, reglezi gramajul și vezi pe loc caloriile, proteina și cât te costă</li>
+        </ul>
+        <p class="mini-nota">Îl deschizi pe telefon în magazin și știi exact ce iei și cât costă. Fără abonament, fără cont, rămâne al tău.</p>
+        <span class="ramane">Rămâne pe viață</span>
+      </li>
+      <li>
+        <h3>Cele 7 ghiduri</h3>
+        <p>Scrise simplu, de citit în 10 minute fiecare. Le descarcă și îi rămân pe telefon, inclusiv peste doi ani.</p>
+        <span class="ramane">Rămâne pe viață</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <p class="numar"><i>05</i> Ce știe să facă la final</p>
+    <h2>Semnele că a mers</h2>
+    <ul class="bife">
+      <li>Îți faci singur farfuria, fără să întrebi pe nimeni.</li>
+      <li>Știi ce mănânci înainte de competiție și ce după.</li>
+      <li>Îți pregătești pachetul pentru serviciu în 5 minute.</li>
+      <li>Citești o etichetă și înțelegi ce scrie pe ea.</li>
+      <li>Știi cât trebuie să bei într-o zi grea.</li>
+      <li>Te descurci în deplasare, la restaurant sau la benzinărie.</li>
+      <li>Îți recalculezi singur cifrele când se schimbă greutatea sau volumul de antrenament.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="registru">
+      <p class="numar"><i>06</i> După absolvire</p>
+      <h2>Registrul Sportivilor</h2>
+      <p>Când termină cele 8 săptămâni, intră în Registrul Sportivilor. Instrumentele rămân deschise, iar progresul lui rămâne urmărit și după ce se încheie grupa.</p>
+      <p>Nu e o listă de nume. E felul în care ținem legătura cu sportivii care au trecut pe aici.</p>
+      <p class="citat">Un sportiv educat nu ar trebui să fie un lux.</p>
+    </div>
+  </div>
+</section>
+
+<section id="pret">
+  <div class="container">
+    <p class="numar"><i>07</i> Cât costă și ce primești</p>
+    <h2>200 de euro, totul inclus</h2>
+
+    <div class="pret-cutie">
+      <div class="pret-sus">
+        <p class="pret-cifra">200<small>€</small></p>
+        <p class="pret-sub">Pentru toate cele 8 săptămâni. Adică 100 de euro pe lună. Nu se adaugă nimic pe parcurs.</p>
+        <dl class="locuri">
+          <div><dt>Locuri maxim</dt><dd>20</dd></div>
+          <div><dt>Pornim de la</dt><dd>10</dd></div>
+          <div><dt>Format</dt><dd>Online</dd></div>
+        </dl>
+      </div>
+      <div class="pret-jos">
+        <h3>În preț intră</h3>
+        <ul class="bife">
+          <li><b>Aplicația de sportivi</b><i>Fotografiază farfuria, primește răspuns.</i></li>
+          <li><b>4 seminarii live</b><i>Întrebări în direct. Se înregistrează.</i></li>
+          <li><b>2 masterclass cu invitați</b><i>Alergare corectă și prevenția accidentărilor.</i></li>
+          <li><b>Grup de WhatsApp</b><i>Pentru întrebări între seminarii.</i></li>
+          <li><b>7 ghiduri scrise</b><i>Rămân ale tale.</i></li>
+          <li><b>Calculatorul pe kg de corp</b><i>Rămâne al tău.</i></li>
+          <li><b>Sistemul „Mese on-the-go”</b><i>Rămâne al tău.</i></li>
+          <li><b>Șablon de antrenament pe sportul tău</b></li>
+          <li><b>Măsurători înainte și după</b></li>
+          <li><b>Diploma „Sportiv Calibrat” și Registrul Sportivilor</b></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="sub-btn" style="text-align:left;color:var(--text-3);margin-top:16px;">Grupa pornește doar dacă se strâng cel puțin 10 înscrieri. Dacă nu se strâng, îți spun din timp și amânăm.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <p class="numar"><i>08</i> Întrebări frecvente</p>
+
+    <details>
+      <summary>Contează ce sport fac?</summary>
+      <p>Nu. Fotbal, alergare, ciclism, înot, handbal, tenis, arte marțiale, sală. Principiile sunt aceleași, iar cifrele se calculează pe sportul tău și pe cât te antrenezi.</p>
+    </details>
+    <details>
+      <summary>Trebuie să fiu sportiv de performanță?</summary>
+      <p>Nu. Trebuie să te antrenezi constant și să vrei să înțelegi ce faci. E la fel de util dacă joci fotbal de două ori pe săptămână și vrei să nu mai obosești în repriza a doua.</p>
+    </details>
+    <details>
+      <summary>E o dietă de slăbit?</summary>
+      <p>Nu. E despre performanță și despre cum îți susții antrenamentul. Compoziția corporală se schimbă de obicei ca efect secundar, dar nu ăsta e scopul și nu asta vindem.</p>
+    </details>
+    <details>
+      <summary>Mă antrenez doar seara, după serviciu. Merge?</summary>
+      <p>Da, și e cazul cel mai frecvent. Un modul întreg e despre ce mănânci când antrenamentul e la 20:30, cum arată cina după el și cum pornești a doua zi fără să fii gol.</p>
+    </details>
+    <details>
+      <summary>Cât timp îmi ia pe săptămână?</summary>
+      <p>Un seminar live de aproximativ o oră, plus câteva minute pe zi în aplicație. Nu te scoate de la antrenamente și nu îți mănâncă din timpul de serviciu.</p>
+    </details>
+    <details>
+      <summary>Trebuie să cumpăr suplimente?</summary>
+      <p>Nu. Programul e construit pe mâncare din magazinele de aici, iar unul dintre instrumente îți arată exact cât costă fiecare masă. Dacă apare discuția despre suplimente, e ca informație, nu ca vânzare. Eu nu vând suplimente.</p>
+    </details>
+    <details>
+      <summary>Dacă lipsesc de la un seminar?</summary>
+      <p>Toate seminariile se înregistrează. Le vezi când ai timp, iar întrebările le pui pe grup.</p>
+    </details>
+    <details>
+      <summary>Ce se întâmplă după cele 8 săptămâni?</summary>
+      <p>Calculatorul, sistemul de mese și ghidurile rămân ale tale. Intri în Registrul Sportivilor și poți reveni oricând la materiale.</p>
+    </details>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="despre">
+      <h3>Cine ține programul</h3>
+      <p>Fabius Antal. Lucrez cu fotbaliști profesioniști și cu atleți olimpici.</p>
+      <p>Aceleași principii, așezate pe programul unui adult care are și serviciu, nu doar antrenamente.</p>
+    </div>
+  </div>
+</section>
+
+<div class="final">
+  <div class="container">
+    <p class="numar"><i>09</i> Înscriere</p>
+    <h2>Intră în grup și vorbim acolo</h2>
+    <p style="margin-bottom:22px;">În grup afli tot: cum se desfășoară, ce primești și cum se face înscrierea. Îmi zici ce sport faci, de câte ori pe săptămână te antrenezi și cum mănânci acum. Dacă văd că nu ai ce să câștigi, îți spun direct.</p>
+
+    <div class="butoane">
+      <a class="btn" href="https://chat.whatsapp.com/EShE6ytwomaGuFqb94dWLn">Intră în grupul de WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<div class="bara"><a href="https://chat.whatsapp.com/EShE6ytwomaGuFqb94dWLn">Intră în grup · 200 €</a></div>
+</body>
+</html>
