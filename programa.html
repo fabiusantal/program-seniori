@@ -3,109 +3,72 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Programa · Seniori · PCL Divizia Performanță</title>
-<meta name="description" content="Pașii tăi, săptămână cu săptămână, de la start până la absolvire. Grupa din 3 septembrie.">
+<title>Programul · Seniori · PCL Divizia Performanță</title>
+<meta name="description" content="Calendarul programului, cu cheile fiecărei etape. Start 4 septembrie.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --mov:#5C1EFA; --mov-inchis:#4A14D6;
-  --cyan:#F6B84B;   /* accent seniori: auriu */
-  --auriu:#F6B84B;
-  --noapte:#160D30; --noapte-2:#1E1240;
-  --hartie:#FFFFFF; --hartie-2:#F5F2FF;
-  --linie:rgba(22,13,48,.12); --linie-tare:rgba(22,13,48,.22);
-  --text:#160D30; --text-2:rgba(22,13,48,.68); --text-3:rgba(22,13,48,.62);
+  --mov:#5C1EFA; --cyan:#F6B84B; /* accent seniori: auriu */
+  --noapte:#160D30; --hartie:#FFFFFF; --hartie-2:#F5F2FF;
+  --linie:rgba(22,13,48,.12); --text:#160D30; --text-2:rgba(22,13,48,.68); --text-3:rgba(22,13,48,.6);
   --alb-2:rgba(255,255,255,.76); --alb-3:rgba(255,255,255,.55);
 }
 *,*::before,*::after{box-sizing:border-box;}
 html,body{max-width:100%;overflow-x:hidden;}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;}
 body{margin:0;background:var(--hartie);color:var(--text);font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-wrap:break-word;}
 p{margin:0 0 1em;max-width:45ch;} p:last-child{margin-bottom:0;}
-h1,h2,h3,h4{font-family:Fraunces,Georgia,serif;font-weight:600;margin:0;line-height:1.18;letter-spacing:-.01em;}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;margin:0;line-height:1.18;letter-spacing:-.01em;}
 .container{width:100%;max-width:640px;margin:0 auto;}
-.zona{padding:0 20px;}
 .cap{background:var(--noapte);color:#fff;padding:14px 20px;border-bottom:1px solid rgba(246,184,75,.22);}
 .cap-in{display:flex;align-items:center;justify-content:space-between;gap:12px;}
 .marca{font-family:Fraunces,Georgia,serif;font-size:15px;font-weight:600;white-space:nowrap;}
 .marca span{color:var(--cyan);}
 .marca-sub{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--alb-3);white-space:nowrap;}
-.hero{background:var(--noapte);color:#fff;padding:26px 20px 26px;}
+.hero{background:var(--noapte);color:#fff;padding:28px 20px 30px;}
 .eyebrow{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.16em;color:var(--cyan);margin:0 0 12px;}
-.hero h1{font-size:clamp(1.7rem,7.6vw,2.55rem);color:#fff;margin:0 0 12px;letter-spacing:-.02em;}
+.hero h1{font-size:clamp(1.7rem,7.6vw,2.5rem);color:#fff;margin:0 0 12px;letter-spacing:-.02em;}
 .hero h1 em{font-style:normal;color:var(--cyan);}
-.hero-lede{color:var(--alb-2);font-size:16.5px;max-width:42ch;margin:0;}
+.hero p{color:var(--alb-2);font-size:16.5px;max-width:42ch;}
+.start{display:inline-flex;align-items:center;gap:10px;margin-top:16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:99px;padding:9px 16px;font-size:14px;font-weight:700;}
+.start i{width:9px;height:9px;border-radius:50%;background:var(--cyan);font-style:normal;}
 
-section{padding:32px 0 6px;}
-.numar{display:flex;align-items:center;gap:12px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text-3);margin:0 0 12px;}
-.numar i{font-style:normal;font-variant-numeric:tabular-nums;}
-.numar::after{content:"";flex:1;height:1px;background:var(--linie);min-width:16px;}
-h2{font-size:clamp(1.45rem,5.6vw,1.9rem);margin:0 0 12px;}
-.intro{color:var(--text-2);font-size:16.5px;}
-
-/* checklist */
-.bife{list-style:none;margin:14px 0 0;padding:0;}
-.bife li{display:flex;gap:14px;align-items:flex-start;padding:13px 0;border-top:1px solid var(--linie);}
-.bife li:first-child{border-top:0;padding-top:0;}
-.bife .n{flex:0 0 auto;width:30px;height:30px;border-radius:9px;background:var(--noapte);color:var(--cyan);font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;margin-top:2px;}
-.bife b{display:block;font-size:16.5px;line-height:1.35;}
-.bife span{display:block;font-size:14.5px;color:var(--text-2);margin-top:3px;line-height:1.5;}
-.bife .tag{display:inline-block;margin-top:6px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mov);background:#EEE8FF;border-radius:99px;padding:3px 9px;}
-.azi{margin-top:14px;background:var(--hartie-2);border-radius:14px;padding:14px 16px;font-size:15px;color:var(--text-2);}
-.azi b{color:var(--text);}
+.zona{padding:0 20px;}
+.principiu{margin:22px 0 0;background:var(--hartie-2);border-left:4px solid var(--mov);border-radius:0 14px 14px 0;padding:14px 16px;}
+.principiu b{display:block;font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--mov);margin-bottom:4px;}
+.principiu p{font-size:15.5px;max-width:none;}
 
 /* calendar */
-.fapte{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 16px;margin:0 0 14px;padding:0;}
-.fapte div{min-width:0;}
-.fapte dt{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.13em;color:var(--text-3);margin:0 0 2px;}
-.fapte dd{margin:0;font-family:Fraunces,Georgia,serif;font-size:18px;font-weight:600;}
-.start-linie{margin:0 0 14px;padding:12px 14px;border:1px dashed rgba(92,30,250,.4);border-radius:12px;background:#F3EEFF;font-size:14.5px;color:var(--text-2);max-width:none;}
-.start-linie b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:var(--mov);margin-bottom:3px;}
-.ritm{display:flex;flex-direction:column;gap:6px;margin:0 0 4px;}
-.ritm div{display:flex;gap:12px;align-items:flex-start;background:var(--hartie-2);border-radius:12px;padding:10px 14px;}
-.ritm .z{flex:0 0 82px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--mov);margin-top:4px;}
-.ritm .t{font-size:14.5px;line-height:1.45;}
-.traseu{list-style:none;margin:6px 0 0;padding:0;}
-.modul{border:1px solid var(--linie);border-radius:18px;padding:18px 16px;margin-top:14px;background:#fff;}
-.modul.acum{border-color:var(--mov);box-shadow:0 0 0 3px rgba(92,30,250,.08);}
-.modul.gata{opacity:.72;}
-.eticheta-pas{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mov);margin:0 0 6px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;}
-.eticheta-pas span{color:var(--text-2);letter-spacing:.05em;}
-.modul h3{font-size:20px;margin:0 0 10px;}
-.sem{display:inline-flex;align-items:center;gap:8px;background:var(--noapte);color:#fff;border-radius:99px;padding:7px 12px;font-size:13px;font-weight:700;margin:0 0 6px;}
-.sem i{width:8px;height:8px;border-radius:50%;background:var(--cyan);font-style:normal;}
-.rand{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--linie);font-size:15px;line-height:1.5;}
-.rand:last-child{border-bottom:0;padding-bottom:0;}
-.rand .k{flex:0 0 78px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-3);margin-top:4px;}
-.rand .v{flex:1;min-width:0;}
-.master{margin:10px 0 10px;padding:12px 14px;border-radius:12px;background:rgba(246,184,75,.12);border:1px solid rgba(246,184,75,.4);font-size:14.5px;line-height:1.5;}
-.master b{display:block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8A5A0B;margin-bottom:3px;}
-.final{background:var(--noapte);color:#fff;border-radius:18px;padding:20px 18px;margin-top:14px;}
-.final .eticheta-pas{color:var(--cyan);} .final .eticheta-pas span{color:var(--alb-3);}
-.final h3{color:#fff;font-size:20px;margin:0 0 10px;}
-.final .rand{border-bottom-color:rgba(255,255,255,.14);color:var(--alb-2);}
-.final .rand .k{color:var(--alb-3);}
-.final .rand .v b{color:#fff;}
-.nota-test{font-size:14px;color:var(--text-2);margin:12px 0 0;max-width:none;}
+.cal{list-style:none;margin:26px 0 0;padding:0 0 0 30px;position:relative;}
+.cal::before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:2px;background:var(--linie);}
+.et{position:relative;padding:0 0 26px;}
+.et::before{content:"";position:absolute;left:-27px;top:6px;width:16px;height:16px;border-radius:50%;background:#fff;border:3px solid var(--mov);}
+.et.luna::before{background:var(--mov);}
+.et.final::before{background:var(--noapte);border-color:var(--noapte);}
+.cand{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mov);margin:0 0 4px;}
+.cand span{color:var(--text-2);letter-spacing:.05em;text-transform:none;font-weight:600;}
+.et h2{font-size:21px;margin:0 0 8px;}
+.cheie{display:flex;gap:10px;align-items:flex-start;background:var(--hartie-2);border-radius:12px;padding:10px 12px;margin:0 0 10px;font-size:15px;line-height:1.45;}
+.cheie b{flex:0 0 auto;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mov);margin-top:3px;}
+.et ul{margin:0;padding:0 0 0 18px;}
+.et li{font-size:15.5px;line-height:1.5;margin:0 0 6px;color:var(--text);}
+.et li:last-child{margin-bottom:0;}
+.webinar{margin:10px 0 0;padding:12px 14px;border-radius:12px;background:rgba(246,184,75,.12);border:1px solid rgba(246,184,75,.4);font-size:15px;line-height:1.5;}
+.webinar b{display:block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8A5A0B;margin-bottom:3px;}
+.webinar small{display:block;margin-top:6px;font-size:13.5px;color:var(--text-2);}
 
-/* ramane + reguli */
-.unelte{list-style:none;margin:6px 0 0;padding:0;}
-.unelte li{display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-top:1px solid var(--linie);font-size:15.5px;line-height:1.45;}
-.unelte li:first-child{border-top:0;}
-.unelte .ic{flex:0 0 auto;width:34px;height:34px;border-radius:10px;background:var(--hartie-2);display:flex;align-items:center;justify-content:center;font-size:17px;}
-.unelte b{display:block;}
-.unelte span{display:block;font-size:14px;color:var(--text-2);margin-top:2px;}
-.reguli{list-style:none;margin:6px 0 0;padding:0;}
-.reguli li{padding:12px 14px;border-radius:12px;background:var(--hartie-2);margin-top:8px;font-size:15.5px;line-height:1.5;}
-.reguli li b{display:block;}
-
-.jos{padding:30px 20px 44px;background:var(--noapte);color:#fff;margin-top:30px;}
-.jos h2{color:#fff;}
-.jos p{color:var(--alb-2);}
-.jos a{color:var(--cyan);}
-.mini{font-size:13px;color:var(--alb-3);margin-top:16px;max-width:none;}
+.ramane{margin:0;background:var(--noapte);color:#fff;border-radius:18px;padding:20px 18px;}
+.ramane h2{color:#fff;font-size:21px;margin:0 0 6px;}
+.ramane p{color:var(--alb-2);font-size:15px;}
+.ramane ul{list-style:none;margin:12px 0 0;padding:0;}
+.ramane li{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-top:1px solid rgba(255,255,255,.14);font-size:15.5px;line-height:1.45;}
+.ramane li:first-child{border-top:0;padding-top:0;}
+.ramane .ic{flex:0 0 auto;width:32px;height:32px;border-radius:10px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:16px;}
+.ramane li span{display:block;font-size:13.5px;color:var(--alb-3);margin-top:2px;}
+.jos{padding:26px 20px 44px;text-align:left;}
+.jos p{font-size:14px;color:var(--text-2);max-width:none;}
+.jos a{color:var(--mov);}
 </style>
 </head>
 <body>
@@ -113,157 +76,103 @@ h2{font-size:clamp(1.45rem,5.6vw,1.9rem);margin:0 0 12px;}
 <header class="cap">
   <div class="cap-in container">
     <div class="marca">PCL <span>·</span> Divizia Performanță</div>
-    <div class="marca-sub">Programa</div>
+    <div class="marca-sub">Programul</div>
   </div>
 </header>
 
 <div class="hero">
   <div class="container">
-    <p class="eyebrow">Seniori (+18) · grupa din 3 septembrie</p>
-    <h1>Pașii tăi, <em>de azi până la absolvire</em>.</h1>
-    <p class="hero-lede">Tot ce se întâmplă în cele 8 săptămâni și ce ai de făcut tu. Salvează pagina: e fixată și sus în grup.</p>
+    <p class="eyebrow">Seniori (+18) · calendarul programului</p>
+    <h1>Ce urmează, <em>pas cu pas</em>.</h1>
+    <p>Două luni, în ordinea asta. Fiecare etapă are o cheie: un singur lucru pe care îl urmărim atunci. Salvează pagina.</p>
+    <div class="start"><i></i> Start: vineri, 4 septembrie</div>
   </div>
 </div>
 
-<section class="zona" id="sapt0">
+<div class="zona">
   <div class="container">
-    <div class="numar"><i>01</i> <span id="sapt0-eticheta">Săptămâna 0 · 3-6 septembrie</span></div>
-    <h2 id="sapt0-titlu">Acum, până luni</h2>
-    <p class="intro">Șase lucruri mici, în ordinea asta. Le faci pe weekend. De aici plecăm, ca să vedem la final ce s-a schimbat.</p>
-    <ol class="bife">
-      <li><div class="n">1</div><div><b>Intră în grupul de WhatsApp.</b><span>Dacă citești asta, ești deja. Acolo vin anunțurile, linkurile de seminar și feedback-ul. Tot ce ai nevoie e fixat sus în grup.</span></div></li>
-      <li><div class="n">2</div><div><b>Instalează aplicația de sportivi și fă-ți cont.</b><span>Linkul e fixat sus în grup. În ea fotografiezi mesele și primești răspuns. Aceeași aplicație pe care o folosesc sportivi de top din România și de nivel internațional.</span></div></li>
-      <li><div class="n">3</div><div><b>Citește Ghidul smart pentru sportivi.</b><span>PDF, 10 minute. E fixat sus în grup.</span></div></li>
-      <li><div class="n">4</div><div><b>Chestionarul de start, cu cifrele tale.</b><span>Sportul, programul de antrenament și de lucru, alergiile, afecțiunile și medicația, țintele tale, plus acordul tău de participare, bifat tot acolo. Dacă declari o afecțiune sau un tratament, vorbim separat și adaptez cifrele pe situația ta; rămâi în grupă. Țintele le calculezi din Ghidul smart, pagina „Cât, pe kg”: gramele pe kilogram înmulțite cu kilogramele tale, la mijlocul intervalului. Chestionarul e fixat sus în grup. Ăsta e momentul în care cei mai mulți realizează că mănâncă jumătate din ce au nevoie.</span><span class="tag">obligatoriu</span></div></li>
-      <li><div class="n">5</div><div><b>Măsurătorile de start.</b><span>Greutatea dimineața, după ce ai fost la toaletă, înainte să mănânci. Talia cu un centimetru de croitorie, la nivelul buricului, fără să tragi burta, în aceeași zi. Energia de la 1 la 10 și orele de somn. Le treci în chestionar. Le comparăm cu cele de la final.</span><span class="tag">o singură dată</span></div></li>
-      <li><div class="n">6</div><div><b>Prima poză de masă în aplicație.</b><span>Chiar azi, la următoarea masă. Nu contează ce e în farfurie. Contează să pornim.</span></div></li>
-    </ol>
-    <div class="azi"><b>Dacă nu apuci tot până luni:</b> aplicația, chestionarul de start și prima poză. Restul le termini în prima săptămână.</div>
-  </div>
-</section>
 
-<section class="zona">
-  <div class="container">
-    <div class="numar"><i>02</i> Calendarul</div>
-    <h2>Cele 8 săptămâni, cu date</h2>
-    <dl class="fapte">
-      <div><dt>Start</dt><dd>3 septembrie</dd></div>
-      <div><dt>Absolvire</dt><dd>2-8 noiembrie</dd></div>
-      <div><dt>Seminarii live</dt><dd>4, luni seara</dd></div>
-      <div><dt>Masterclass</dt><dd>2, cu invitați</dd></div>
-    </dl>
-    <div class="start-linie"><b>Cum afli ora și linkul</b>Seminariile sunt luni seara, o dată la două săptămâni, cam 50 de minute. Ora exactă și linkul vin pe grup cu o zi înainte. Toate se înregistrează.</div>
-    <div class="ritm">
-      <div><span class="z">Luni</span><span class="t">Seminar (la 2 săptămâni) sau obiectivul săptămânii, pe grup.</span></div>
-      <div><span class="z">Miercuri</span><span class="t">„Arată-mi”: o poză cu tema săptămânii.</span></div>
-      <div><span class="z">Vineri</span><span class="t">Feedback și 3 exemple bune din grup.</span></div>
+    <div class="principiu">
+      <b>Un singur principiu, de ținut minte</b>
+      <p>Nu mergem pe diete și nu pe rețete fixe. De rețete fixe nu se ține nimeni. Mergem pe macronutrienți: cât, când și de ce, pe sportul tău. Planul alimentar e o direcție a alimentației tale, nu o listă de urmat.</p>
     </div>
-    <p class="nota-test">La finalul fiecărui modul e un test scurt de aplicare, nu de memorat: câteva întrebări, primite pe grup, se pot reface. Pe zi îți ia câteva minute; nu te scoate de la antrenamente și nu îți mănâncă din timpul de serviciu.</p>
 
-    <ol class="traseu">
+    <ol class="cal">
 
-      <li class="modul" data-start="2026-09-07">
-        <div class="eticheta-pas">Modulul 1 <span>7-20 septembrie</span></div>
-        <h3>Farfuria și dimineața</h3>
-        <div class="sem"><i></i> Seminar 1 · luni, 7 septembrie</div>
-        <div class="rand"><span class="k">Înveți</span><span class="v">Farfuria de Performanță, fără cântar. Micul dejun când ai 20 de minute dimineața. De ce prima masă a zilei decide antrenamentul de seara.</span></div>
-        <div class="rand"><span class="k">Primești</span><span class="v"><b>Ghidul 2 · Mic dejun de sportiv</b>, cu 22 de rețete.</span></div>
-        <div class="rand"><span class="k">Faci</span><span class="v">Poză la micul dejun în fiecare zi. Ținta: proteină la prima masă, după cifra ta.</span></div>
-        <div class="rand"><span class="k">Test 1</span><span class="v">Recunoști farfuria echilibrată și alegi micul dejun bun dintre variante.</span></div>
+      <li class="et">
+        <div class="cand">Săptămâna 1 <span>· 4-11 septembrie</span></div>
+        <h2>Ce mănânci acum</h2>
+        <div class="cheie"><b>Cheia</b><span>Înțelegem alimentația ta de azi. Nu schimbăm nimic încă.</span></div>
+        <ul>
+          <li>Primești acces în aplicația dedicată.</li>
+          <li>Pui poze cu tot ce mănânci, în fiecare zi, până vineri, 11 septembrie.</li>
+        </ul>
       </li>
 
-      <li class="modul" data-start="2026-09-21">
-        <div class="eticheta-pas">Modulul 2 <span>21 septembrie - 4 octombrie</span></div>
-        <h3>Mâncarea din jurul antrenamentului</h3>
-        <div class="sem"><i></i> Seminar 2 · luni, 21 septembrie</div>
-        <div class="rand"><span class="k">Înveți</span><span class="v">Cronologia 4-2-1-0: ce mănânci cu 4 ore, 2 ore, 1 oră înainte și la start. Ce bei în timpul efortului, ce pui în corp în prima oră după. Cazul special: antrenamentul la 20:30, după serviciu.</span></div>
-        <div class="rand"><span class="k">Primești</span><span class="v"><b>Ghidul 1 · Ziua meciului</b> și <b>Ghidul 3 · Gustări, shake-uri și înghețate proteice</b>. Accesul la sistemul <b>Mese on-the-go</b>: 82 de produse reale cu prețuri, constructor de mese, listă de cumpărături.</span></div>
-        <div class="rand"><span class="k">Faci</span><span class="v">Poză la masa dinainte și de după antrenament. Îți construiești în sistem masa pre și post și o duci la magazin.</span></div>
-        <div class="master"><b>Masterclass 1 · invitat</b>Alergarea corectă, cu un antrenor de atletism care lucrează la nivel olimpic. Data se anunță pe grup. Se înregistrează.</div>
-        <div class="rand"><span class="k">Test 2</span><span class="v">Așezi o zi de competiție pe cronologia 4-2-1-0 și alegi gustarea potrivită.</span></div>
+      <li class="et">
+        <div class="cand">După cele 7 zile <span>· 12-13 septembrie</span></div>
+        <h2>Analiza și documentul tău</h2>
+        <div class="cheie"><b>Cheia</b><span>Direcția ta, construită pe ce mănânci de fapt, nu pe un șablon.</span></div>
+        <ul>
+          <li>Primești un document clar, pe ce mănânci și pe sportul tău: ce trebuie schimbat, când, de ce, și opțiuni pornite din ce mănânci în mare parte.</li>
+          <li>De aici se setează macronutrienții pe kilogram de corp: unde trebuie să fii și când, pe sportul tău.</li>
+        </ul>
       </li>
 
-      <li class="modul" data-start="2026-10-05">
-        <div class="eticheta-pas">Modulul 3 <span>5-18 octombrie</span></div>
-        <h3>Apa și refacerea</h3>
-        <div class="sem"><i></i> Seminar 3 · luni, 5 octombrie</div>
-        <div class="rand"><span class="k">Înveți</span><span class="v">Cât bei într-o zi cu două antrenamente, apă sau electroliți, capcana cafelei. Cei 3 piloni ai recuperării: somn, proteină, mișcare ușoară. Ce face alcoolul, concret, la recuperare.</span></div>
-        <div class="rand"><span class="k">Primești</span><span class="v"><b>Ghidul 4 · Ghidul hidratării</b>, <b>Ghidul 5 · Codul recuperării</b> și <b>șablonul de antrenament</b> pe sportul tău.</span></div>
-        <div class="rand"><span class="k">Faci</span><span class="v">Notezi apa zilnic, cu țintă. Poză la masa de recuperare de după efort. Rutina de mobilitate de 10 minute, după masterclass-ul cu kinetoterapeutul.</span></div>
-        <div class="master"><b>Masterclass 2 · invitat</b>Corpul: prevenție și mobilitate, cu un kinetoterapeut. Ce faci zilnic 10 minute ca să nu ajungi la accidentare. Data se anunță pe grup. Se înregistrează.</div>
-        <div class="rand"><span class="k">Test 3</span><span class="v">Estimezi necesarul de apă la o zi de căldură și recunoști o rutină bună de recuperare.</span></div>
+      <li class="et">
+        <div class="cand">Săptămâna 2 <span>· 14-20 septembrie</span></div>
+        <h2>Grupul se deschide</h2>
+        <div class="cheie"><b>Cheia</b><span>Aplici direcția și întrebi orice, pe grup.</span></div>
+        <ul>
+          <li>Comunicarea merge pe grup: întrebări, direcții, situații diferite. Pe scurt, orice.</li>
+        </ul>
+        <div class="webinar"><b>Webinar 1 · la finalul săptămânii 2</b>Cu un antrenor de atletism de nivel olimpic: cum se aleargă corect, ce probleme apar și cum se rezolvă, aplicat pe sportul tău.<small>Data o alegem împreună. Cine nu poate fi live lasă întrebările înainte; le acoperim în webinar, inclusiv pe sportul și ținta ta.</small></div>
       </li>
 
-      <li class="modul" data-start="2026-10-19">
-        <div class="eticheta-pas">Modulul 4 <span>19 octombrie - 1 noiembrie</span></div>
-        <h3>Te descurci singur, oriunde</h3>
-        <div class="sem"><i></i> Seminar 4 · luni, 19 octombrie</div>
-        <div class="rand"><span class="k">Înveți</span><span class="v">Biroul, orașul, deplasarea și drumul lung. Pachetul de birou, cu și fără frigider. Fast-food, benzinărie, supermarket. Încărcarea cu carbohidrați înainte de competiție. Cele 5 obiceiuri care rămân după program.</span></div>
-        <div class="rand"><span class="k">Primești</span><span class="v"><b>Ghidul 6 · Mâncat în oraș și la turnee</b> și modulele avansate din sistem: <b>planul zilei</b> pe greutatea ta, <b>lista de cumpărături automată</b> și <b>calculatorul de încărcare cu carbohidrați</b>.</span></div>
-        <div class="rand"><span class="k">Faci</span><span class="v">O zi de lucru obișnuită, documentată complet, cu serviciu și antrenament în aceeași zi. Lista de cumpărături pe o săptămână, cu care mergi la magazin.</span></div>
-        <div class="rand"><span class="k">Test final</span><span class="v">Alegi corect la un meniu de fast-food, compui pachetul de deplasare și planifici ziua dinaintea unei competiții.</span></div>
+      <li class="et">
+        <div class="cand">Săptămâna 3 <span>· 21-27 septembrie</span></div>
+        <h2>Suplimentare și prepararea mâncării</h2>
+        <div class="cheie"><b>Cheia</b><span>Începi să urmărești valorile de macronutrienți.</span></div>
+        <ul>
+          <li>Suplimentarea: ce are sens și ce nu, explicat ca pentru adulți.</li>
+          <li>Cum îți pregătești mâncarea și cum iei deciziile, pe situația ta: junior care merge la școală sau sportiv care trăiește din asta. Adaptare, decizii, direcții.</li>
+        </ul>
       </li>
 
-      <li class="final" data-start="2026-11-02">
-        <div class="eticheta-pas">Final <span>2-8 noiembrie</span></div>
-        <h3>Absolvirea</h3>
-        <div class="rand"><span class="k">Măsurători</span><span class="v">Aceleași ca la start, puse față în față. Aici vezi ce s-a schimbat.</span></div>
-        <div class="rand"><span class="k">Diploma</span><span class="v"><b>„Sportiv Calibrat”</b>, pentru cine a trecut testele și a încărcat constant în aplicație, adică poze în majoritatea zilelor.</span></div>
-        <div class="rand"><span class="k">Registrul</span><span class="v">Intri în <b>Registrul Sportivilor</b>: instrumentele rămân deschise, progresul rămâne urmărit.</span></div>
+      <li class="et">
+        <div class="cand">Săptămâna 4 <span>· 28 septembrie - 4 octombrie</span></div>
+        <h2>Se așază ritmul</h2>
+        <div class="cheie"><b>Cheia</b><span>Pozele continuă, ajustăm pe grup, intrăm ușor în luna 2.</span></div>
       </li>
+
+      <li class="et luna">
+        <div class="cand">Luna 2 <span>· 5 octombrie - 1 noiembrie</span></div>
+        <h2>Refacerea</h2>
+        <div class="cheie"><b>Cheia</b><span>Hidratarea și importanța ei. Ai deja direcția pe alimentație, pe nevoile tale; acum vedem ce e pe lângă.</span></div>
+        <div class="webinar"><b>Webinar 2 · în luna 2</b>Cu un kinetoterapeut de top, pentru juniori și seniori, și cu unul dintre cei mai buni preparatori fizici din România, fost la lotul național de juniori și la echipe mari, în țară și internațional. Adevărul despre proces: ce trebuie să faci pe lângă alimentație, și de ce.<small>Aceeași regulă ca la primul: data o alegem împreună; cine nu poate live lasă întrebările înainte.</small></div>
+      </li>
+
+      <li class="et final">
+        <div class="ramane">
+          <h2>Ce rămâne cu tine</h2>
+          <p>Din acest punct mergi singur, cu instrumentele tale.</p>
+          <ul>
+            <li><div class="ic">📗</div><div>Ghidurile de urmat<span>Le ai pe telefon, le recitești când ai nevoie.</span></div></li>
+            <li><div class="ic">🏃</div><div>Șabloanele de antrenament<span>Pe sportul tău.</span></div></li>
+            <li><div class="ic">🛒</div><div>Sistemul Mese on-the-go<span>Produse reale de la Auchan, cu prețuri, setări și bugete. Îl deschizi în magazin.</span></div></li>
+          </ul>
+        </div>
+      </li>
+
     </ol>
   </div>
-</section>
-
-<section class="zona">
-  <div class="container">
-    <div class="numar"><i>03</i> După</div>
-    <h2>Ce rămâne al tău</h2>
-    <ul class="unelte">
-      <li><div class="ic">🧮</div><div><b>Calculatorul pe kilogram de corp</b><span>Când se schimbă greutatea sau sezonul, îl recalculezi în 30 de secunde.</span></div></li>
-      <li><div class="ic">🛒</div><div><b>Sistemul Mese on-the-go</b><span>82 de produse, 98 de mese, planul zilei, lista de cumpărături, încărcarea cu carbohidrați.</span></div></li>
-      <li><div class="ic">📗</div><div><b>Cele 7 ghiduri</b><span>Le descarci și îți rămân pe telefon.</span></div></li>
-      <li><div class="ic">🏃</div><div><b>Șablonul de antrenament pe sportul tău</b><span>Din platformă.</span></div></li>
-    </ul>
-  </div>
-</section>
-
-<section class="zona">
-  <div class="container">
-    <div class="numar"><i>04</i> Ca să meargă</div>
-    <h2>Trei reguli simple</h2>
-    <ul class="reguli">
-      <li><b>Puțin și des.</b> Două poze pe zi, în fiecare zi, bat o zi perfectă pe săptămână.</li>
-      <li><b>Nu poți luni seara?</b> Vezi înregistrarea în aceeași săptămână și pui întrebările pe grup. Nu rămâi în urmă din cauza unui seminar.</li>
-      <li><b>Întrebările merg pe grup, nu în privat.</b> Răspunsul îl folosesc și ceilalți din grupă. Pentru orice: suport, motivație, aplicare.</li>
-    </ul>
-    <p class="intro" style="margin-top:16px;font-size:15.5px"><b style="color:var(--text)">Ai rămas în urmă?</b> Nu recuperezi tot. Faci pasul curent și pozele de azi. Ce a trecut citești din ghiduri, în ritmul tău.</p>
-  </div>
-</section>
+</div>
 
 <div class="jos">
   <div class="container">
-    <h2 id="jos-titlu">Ne vedem luni, la primul seminar.</h2>
-    <p id="jos-text">Până atunci: aplicația, chestionarul și prima poză. Restul vine pas cu pas.</p>
-    <p class="mini">Prezentarea programului, cu tot ce include: <a href="https://fabiusantal.github.io/program-seniori/">program-seniori</a>. Fabius Antal · PCL Divizia Performanță. Lucrez cu fotbaliști profesioniști și cu atleți olimpici. Aceleași principii, pe programul tău de muncă și antrenamente.</p>
+    <p>Orice întrebare: pe grup. Prezentarea programului, cu tot ce include: <a href="https://fabiusantal.github.io/program-seniori/">program-seniori</a>.</p>
   </div>
 </div>
 
-<script>
-  // pagina stă fixată 8 săptămâni: evidențiază modulul curent după data de azi
-  (function(){
-    var azi=new Date(); azi.setHours(0,0,0,0);
-    var mod=[].slice.call(document.querySelectorAll('.traseu > li[data-start]'));
-    var idx=-1; mod.forEach(function(li,i){ if(azi>=new Date(li.getAttribute('data-start')+'T00:00:00')) idx=i; });
-    var sem=['7 septembrie','21 septembrie','5 octombrie','19 octombrie'];
-    if(idx<0) return; // săptămâna 0: pagina rămâne cum e scrisă
-    mod.forEach(function(li,i){ li.classList.toggle('acum',i===idx); if(i<idx) li.classList.add('gata'); });
-    document.getElementById('sapt0-eticheta').textContent='Săptămâna 0 · 3-6 septembrie · gata';
-    document.getElementById('sapt0-titlu').textContent='Pașii de la început';
-    var t=document.getElementById('jos-titlu'), p=document.getElementById('jos-text');
-    if(idx<4){ t.textContent='Suntem în modulul '+(idx+1)+'.'; p.textContent=idx<3?('Următorul seminar: luni, '+sem[idx+1]+'. Până atunci, pozele de azi și tema săptămânii.'):'Urmează absolvirea, 2-8 noiembrie. Până atunci, pozele de azi și lista de cumpărături.'; }
-    else { t.textContent='Săptămâna absolvirii.'; p.textContent='Măsurătorile de final, diploma și intrarea în Registru. Detaliile vin pe grup.'; }
-  })();
-</script>
 </body>
 </html>
