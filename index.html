@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Program de nutriție pentru sportivi +18 · PCL Divizia Performanță</title>
-<meta name="description" content="Opt săptămâni după care știi singur ce să mănânci. 200 de euro, maximum 20 de locuri. PCL Divizia Performanță.">
+<title>Program de nutriție pentru fotbaliști +18 · PCL Divizia Performanță</title>
+<meta name="description" content="Opt săptămâni de nutriție pentru fotbaliști de peste 18 ani, după care știi singur ce să mănânci. Ultima grupă din acest an începe pe 15 octombrie, maximum 20 de locuri. PCL Divizia Performanță.">
 <meta name="theme-color" content="#160D30">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -310,7 +310,7 @@ details p{padding:0 0 16px;color:var(--text-2);font-size:16px;}
   min-height:52px;border-radius:13px;text-decoration:none;
   background:var(--cyan);color:var(--noapte);font-weight:700;font-size:16.5px;
 }
-body{padding-bottom:88px;}
+
 @media (min-width:720px){ .bara{display:none;} body{padding-bottom:0;} }
 @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
 
@@ -335,6 +335,61 @@ body{padding-bottom:88px;}
   border-radius:50%;background:var(--cyan);}
 .unelte .mini li b{color:var(--text);font-weight:700;}
 .unelte .mini-nota{font-size:15px;color:var(--text-2);font-style:italic;margin:0 0 10px;}
+
+/* ---------- cine sunt ---------- */
+.cine{display:flex;gap:16px;align-items:center;margin:0 0 14px;}
+.cine-foto{flex:0 0 auto;width:84px;height:84px;border-radius:50%;object-fit:cover;object-position:50% 22%;
+  border:3px solid var(--hartie-2);box-shadow:0 10px 26px -12px rgba(22,13,48,.5);}
+.cine h2{margin:0;}
+.cine-bio{color:var(--text-2);font-size:16.5px;margin:0 0 20px;max-width:none;}
+.cifre{margin:0 0 26px;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;}
+.cifre div{background:var(--hartie-2);border-radius:12px;padding:12px 14px;min-width:0;display:flex;flex-direction:column;}
+.cifre dd{margin-top:auto!important;}
+.cifre dt{font-size:11px;text-transform:uppercase;letter-spacing:.11em;font-weight:700;color:var(--text-3);margin:0 0 2px;}
+.cifre dd{margin:0;font-family:Fraunces,Georgia,serif;font-size:24px;font-weight:600;color:var(--mov);}
+.sp-titlu{font-size:18px;margin:0 0 12px;}
+.sportivi{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:8px;}
+.sportivi li{border:1px solid var(--linie);border-left:3px solid var(--cyan);border-radius:12px;padding:11px 14px;}
+.sportivi b{display:block;font-family:Fraunces,Georgia,serif;font-size:17px;font-weight:600;}
+.sportivi span{display:block;font-size:14.5px;color:var(--text-2);line-height:1.45;margin-top:2px;}
+.nda{font-size:14px;color:var(--text-3);margin:10px 0 0;max-width:none;}
+.directia{margin:26px 0 0;background:var(--noapte-2);color:#fff;border-radius:18px;padding:24px 20px;}
+.dir-q,.dir-a{font-family:Fraunces,Georgia,serif;font-size:clamp(1.3rem,5.4vw,1.7rem);line-height:1.25;font-weight:600;max-width:none;}
+.dir-q{color:#fff;margin:0 0 4px;}
+.dir-a{color:var(--cyan);margin:0 0 14px;}
+.dir-t{color:var(--alb-2);font-size:16px;margin:0;max-width:none;}
+.hero .fapte:last-child{margin-bottom:0;}
+.sp-titlu.mt{margin-top:24px;}
+.cluburi{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:8px;}
+.cluburi li{background:var(--hartie-2);border-radius:12px;padding:11px 14px;}
+.cluburi b{display:block;font-family:Fraunces,Georgia,serif;font-size:17px;font-weight:600;}
+.cluburi span{display:block;font-size:14.5px;color:var(--text-2);line-height:1.45;margin-top:2px;}
+.curand{display:inline-block;font-family:"Plus Jakarta Sans",sans-serif;font-style:normal;font-size:10.5px;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;color:#8A5A08;background:rgba(246,184,75,.25);border-radius:999px;padding:3px 9px;margin-left:8px;vertical-align:2px;}
+@media (min-width:700px){ .cluburi{grid-template-columns:repeat(2,minmax(0,1fr));} }
+.presa-linie{font-size:14px;color:var(--text-3);margin:14px 0 0;max-width:none;}
+
+/* ---------- ecrane din aplicatie ---------- */
+.ecrane{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+  margin:22px -20px 0;padding:4px 20px 12px;scroll-padding-left:20px;}
+.ecrane figure{flex:0 0 72%;scroll-snap-align:start;margin:0;}
+.tel{border-radius:28px;background:#160c30;padding:7px;
+  box-shadow:0 20px 44px -20px rgba(22,13,48,.55),0 0 0 1px rgba(92,30,250,.16);}
+.tel img{width:100%;border-radius:22px;}
+.ecrane figcaption{margin:12px 2px 0;}
+.ecrane figcaption b{display:block;font-family:Fraunces,Georgia,serif;font-size:17px;font-weight:600;}
+.ecrane figcaption span{display:block;font-size:14.5px;color:var(--text-2);line-height:1.45;margin-top:2px;}
+.gliseaza{font-size:13px;color:var(--text-3);margin:4px 0 0;max-width:none;}
+.mese-tel{max-width:230px;margin:6px auto 16px;}
+@media (min-width:700px){
+  .cine-foto{width:112px;height:112px;}
+  .sportivi{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .ecrane{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;overflow:visible;margin:24px 0 0;padding:0;}
+  .ecrane figure{flex:none;}
+  .tel{border-radius:24px;padding:6px;}
+  .tel img{border-radius:19px;}
+  .gliseaza{display:none;}
+}
 </style>
 </head>
 <body>
@@ -348,46 +403,73 @@ body{padding-bottom:88px;}
 
 <div class="hero">
   <div class="container">
-    <p class="eyebrow">8 săptămâni de nutriție pentru sportivi +18</p>
+    <p class="eyebrow">8 săptămâni de nutriție pentru fotbaliști +18</p>
     <h1>La final nu mai ai nevoie de mine <em>ca să știi ce să mănânci.</em></h1>
     <p class="hero-lede">Fără diete. Fără cântar de bucătărie. Înveți să îți faci singur farfuria, ca să reziști tot antrenamentul și să te refaci până la următorul, chiar dacă ai și serviciu.</p>
-    <p class="hero-lede"><b>Pornim în septembrie, dinadins.</b> E luna în care toată lumea se reapucă serios, după vară. Opt săptămâni acum înseamnă un sezon întreg pe care nu îl mai improvizezi.</p>
+    <p class="hero-lede"><b>Ultima grupă din acest an pornește pe 15 octombrie.</b></p>
 
     <dl class="fapte">
       <div><dt>Durată</dt><dd>8 săptămâni</dd></div>
-      <div><dt>Cost</dt><dd>200 €</dd></div>
+      <div><dt>Start</dt><dd>15 octombrie</dd></div>
       <div><dt>Grupa</dt><dd>Max. 20</dd></div>
       <div><dt>Unde</dt><dd>Online</dd></div>
     </dl>
-
-    <div class="butoane">
-      <a class="btn" href="https://chat.whatsapp.com/EShE6ytwomaGuFqb94dWLn">Intră în grupul de WhatsApp</a>
-      <a class="btn btn-2" href="#pret">Vezi ce include și cât costă</a>
-    </div>
-
-    <!-- ================================================================= -->
-    <!-- DATA DE START: schimbă doar textul dintre <span id="DATA-START">  -->
-    <!-- ================================================================= -->
-    <p class="start-linie">
-      <b>Grupa începe pe</b>
-      <span id="DATA-START">3 septembrie</span>
-      · înscrierile se închid când se ocupă locurile. Sunt doar 20 pentru că fiecare primește răspuns pe pozele lui, iar asta nu se poate face cu oricâți.
-    </p>
   </div>
 </div>
 
+
+<section class="cine-sec">
+  <div class="container">
+    <p class="numar">Cine ține programul</p>
+    <div class="cine">
+      <img class="cine-foto" src="img/fabius.jpg" alt="Fabius Antal" width="112" height="112">
+      <h2>Sunt Fabius Antal.</h2>
+    </div>
+    <p class="cine-bio">De peste 5 ani lucrez la alimentația și refacerea sportivilor de performanță: fotbaliști de la națională, din Liga 1 și din campionatele mari ale Europei, plus atleți de nivel olimpic.</p>
+
+    <dl class="cifre">
+      <div><dt>Sportivi de elită</dt><dd>+40</dd></div>
+      <div><dt>Țări</dt><dd>6+</dd></div>
+      <div><dt>Ani</dt><dd>5+</dd></div>
+    </dl>
+
+    <h3 class="sp-titlu">Câțiva dintre sportivii cu care am lucrat</h3>
+    <ul class="sportivi">
+      <li><b>Vlad Chiricheș</b><span>Fost Napoli și Tottenham. Peste 75 de selecții la naționala României.</span></li>
+      <li><b>Alexandru Chipciu</b><span>Fost Anderlecht și Universitatea Cluj.</span></li>
+      <li><b>Darius Olaru</b><span>Căpitanul FCSB. Internațional.</span></li>
+      <li><b>Alexandru Cicâldău</b><span>Fost Galatasaray și Universitatea Craiova. Internațional.</span></li>
+      <li><b>Andrea Miklós</b><span>Atletism, 400 m. De trei ori olimpică, vicecampioană mondială.</span></li>
+      <li><b>Olimpiu Moruțan</b><span>Fost FCSB și Galatasaray. Internațional.</span></li>
+    </ul>
+    <p class="nda">Plus trei internaționali care joacă în Europa, sub confidențialitate, și alți sportivi care preferă să nu fie numiți.</p>
+
+    <h3 class="sp-titlu mt">Parteneriate cu cluburi</h3>
+    <ul class="cluburi">
+      <li><b>FCSB</b><span>Parteneriat cu tot lotul, 2024 și 2025.</span></li>
+      <li><b>Universitatea Craiova</b><span>Parteneriat cu tot lotul, 2025.</span></li>
+      <li><b>Universitatea Cluj</b><span>Parteneriat de educație.</span></li>
+      <li><b>Farul Constanța <em class="curand">În curând</em></b><span>Parteneriat cu tot lotul.</span></li>
+    </ul>
+
+    <div class="directia">
+      <p class="dir-q">Vrei să înveți cum au făcut Chiricheș, Chipciu sau Olaru?</p>
+      <p class="dir-a">Ăsta e sistemul.</p>
+      <p class="dir-t">Același sistem pe care l-am folosit cu ei, așezat pe programul tău: antrenamente, meciuri și, de cele mai multe ori, un serviciu.</p>
+    </div>
+  </div>
+</section>
 
 <section class="scurt-sec">
   <div class="container">
     <div class="scurt">
       <h2>Pe scurt, în 30 de secunde</h2>
       <dl>
-        <div><dt>Ce este</dt><dd>Opt săptămâni în care înveți cum să mănânci ca să îți susții sportul.</dd></div>
-        <div><dt>Pentru cine</dt><dd>Sportivi de peste 18 ani, orice sport, orice nivel.</dd></div>
-        <div><dt>Cum se ține</dt><dd>Online. Aplicația de sportivi, în care fotografiezi mesele, 4 seminarii live, 2 masterclass cu invitați, grup de WhatsApp.</dd></div>
+        <div><dt>Ce este</dt><dd>Opt săptămâni în care înveți cum să mănânci ca să îți susții fotbalul.</dd></div>
+        <div><dt>Pentru cine</dt><dd>Fotbaliști de peste 18 ani, de orice nivel.</dd></div>
+        <div><dt>Cum se ține</dt><dd>Online. Academia online cu capitole, lecții și video, aplicația de sportivi în care îți fotografiezi mesele, 4 seminarii live, 2 masterclass cu invitați și grupul de WhatsApp.</dd></div>
         <div><dt>Cât durează pe zi</dt><dd>Câteva minute. Fotografiezi mesele și citești în ritmul tău.</dd></div>
         <div><dt>Ce rămâne după</dt><dd>Ghidurile, calculatorul și sistemul de mese rămân ale tale. Plus accesul în Registrul Sportivilor.</dd></div>
-        <div><dt>Cât costă</dt><dd><b>200 € pentru tot programul</b>, adică 100 € pe lună.</dd></div>
       </dl>
     </div>
   </div>
@@ -397,9 +479,8 @@ body{padding-bottom:88px;}
   <div class="container">
     <p class="numar"><i>01</i> Ce este, pe scurt</p>
     <div class="rezumat">
-      <p>Un curs de nutriție pentru sportivi de peste 18 ani. Ține două luni și se face online.</p>
-      <p>Ai 4 întâlniri live, 2 masterclass cu invitați, aplicația de sportivi, în care fotografiezi ce mănânci și 7 ghiduri scrise.</p>
-      <p>Costă 200 de euro în total, adică 100 de euro pe lună.</p>
+      <p>Un curs de nutriție pentru fotbaliști de peste 18 ani. Ține două luni și se face online.</p>
+      <p>Ai 4 întâlniri live, 2 masterclass cu invitați, academia online cu 7 ghiduri scrise și aplicația de sportivi, în care fotografiezi ce mănânci.</p>
     </div>
   </div>
 </section>
@@ -417,12 +498,8 @@ body{padding-bottom:88px;}
         <p>E un sfat pe care nimeni nu îl poate aplica. Nimeni nu îți spune cât, când și ce anume.</p>
       </li>
       <li>
-        <h3>Ce găsești pe internet e scris pentru altcineva</h3>
-        <p>De obicei vine din America, cu produse care nu există aici și cu porții care nu au sens pentru programul tău.</p>
-      </li>
-      <li>
         <h3>Mulți vor unu la unu, dar costă</h3>
-        <p>Lucrul individual cu mine înseamnă câteva sute de euro pe lună. Mulți își doresc asta și nu și-o permit, și e cât se poate de normal. De asta am construit programul ăsta: același sistem și aceleași instrumente, doar că în grupă. Pe 200 de euro, pentru două luni, primești mai mult decât ai primi într-o singură lună de lucru individual.</p>
+        <p>Lucrul individual cu mine înseamnă câteva sute de euro pe lună. Mulți își doresc asta și nu și-o permit, și e cât se poate de normal. De asta am construit programul ăsta: același sistem și aceleași instrumente, doar că în grupă. Pentru două luni, primești mai mult decât ai primi într-o singură lună de lucru individual.</p>
       </li>
     </ul>
   </div>
@@ -432,13 +509,13 @@ body{padding-bottom:88px;}
   <div class="container">
     <p class="numar"><i>03</i> Cele 8 săptămâni</p>
     <h2>Ce se întâmplă, săptămână cu săptămână</h2>
-    <p class="intro">Fiecare modul ține două săptămâni. Se adaugă peste ce a învățat înainte, nu îl ia de la capăt.</p>
+    <p class="intro">Fiecare modul ține două săptămâni și se adaugă peste ce ai învățat înainte. Nu o iei de la capăt.</p>
 
     <ol class="traseu">
       <li>
         <p class="eticheta-pas">Săptămâna 0</p>
-        <h3>Își află cifrele</h3>
-        <p>Ghidul de pornire, calculatorul pe kilogram de corp și măsurătorile de start. De aici plecăm, ca să vedem la final ce s-a schimbat.</p>
+        <h3>Îți afli cifrele</h3>
+        <p>Primești acces în aplicația dedicată sportivilor, aceeași pe care o folosesc nume mari din fotbalul românesc. Plus ghidul de pornire, calculatorul pe kilogram de corp și măsurătorile de start. De aici plecăm, ca să vedem la final ce s-a schimbat.</p>
       </li>
       <li>
         <p class="eticheta-pas">Modulul 1 · săptămânile 1 și 2</p>
@@ -448,7 +525,7 @@ body{padding-bottom:88px;}
       <li>
         <p class="eticheta-pas">Modulul 2 · săptămânile 3 și 4</p>
         <h3>Mâncarea din jurul antrenamentului</h3>
-        <p>Ce mănâncă înainte, ce bea în timpul efortului, ce pune în corp în prima oră după. Partea care se vede cel mai repede.</p>
+        <p>Ce mănânci înainte, ce bei în timpul efortului, ce pui în corp în prima oră după. Partea care se vede cel mai repede.</p>
         <div class="master">
           <span>Masterclass inclus</span>
           <b>Alergarea corectă</b>
@@ -458,16 +535,16 @@ body{padding-bottom:88px;}
       <li>
         <p class="eticheta-pas">Modulul 3 · săptămânile 5 și 6</p>
         <h3>Apa și refacerea</h3>
-        <p>Cât bea într-o zi cu două antrenamente, de ce contează somnul și cum se ridică după un meci greu.</p>
+        <p>Cât bei într-o zi cu două antrenamente, de ce contează somnul și cum te ridici după un meci greu.</p>
         <div class="master">
           <span>Masterclass inclus</span>
           <b>Corpul: prevenție și mobilitate</b>
-          <p>Cu un kinetoterapeut. Ce face zilnic 10 minute, ca să nu ajungă la accidentare.</p>
+          <p>Cu un kinetoterapeut. Ce faci zilnic 10 minute, ca să nu ajungi la accidentare.</p>
         </div>
       </li>
       <li>
         <p class="eticheta-pas">Modulul 4 · săptămânile 7 și 8</p>
-        <h3>Se descurcă singur</h3>
+        <h3>Te descurci singur</h3>
         <p>Serviciul și drumul. Ce pui în pachet, ce alegi la prânz între ture, ce mănânci în deplasare. Aici treci de la „mi-a zis cineva” la „știu eu”.</p>
       </li>
       <li class="pas-ultim">
@@ -481,7 +558,31 @@ body{padding-bottom:88px;}
 
 <section>
   <div class="container">
-    <p class="numar"><i>04</i> Trei lucruri care rămân ale tale</p>
+    <p class="numar"><i>04</i> Cum arată academia online</p>
+    <h2>Academia online: capitole, lecții, video</h2>
+    <p class="intro">Parcurgi cursul în academia online, de pe telefon, capitol după capitol, în ritmul tău. Fiecare capitol are lecțiile lui și un test scurt. Ghidurile se deschid oricând, iar masterclass-urile cu invitați sunt filmate și rămân de revăzut.</p>
+
+    <div class="ecrane">
+      <figure>
+        <div class="tel"><img src="img/capitole.jpg" alt="Capitolele cursului în academia online" width="600" height="1299" loading="lazy"></div>
+        <figcaption><b>Capitolele</b><span>În ordine, de la cifrele tale până la autonomie. Fiecare cu lecțiile și testul lui.</span></figcaption>
+      </figure>
+      <figure>
+        <div class="tel"><img src="img/lectie.jpg" alt="O lecție din curs" width="600" height="1299" loading="lazy"></div>
+        <figcaption><b>O lecție</b><span>Ghidul de citit, plus un exemplu real și ieftin de la Auchan, cu prețuri.</span></figcaption>
+      </figure>
+      <figure>
+        <div class="tel"><img src="img/video.jpg" alt="Video cu specialiști" width="600" height="1299" loading="lazy"></div>
+        <figcaption><b>Video cu specialiști</b><span>Masterclass-urile cu invitați, filmate. Primul: alergarea corectă, pe pista de la Cluj Arena.</span></figcaption>
+      </figure>
+    </div>
+    <p class="gliseaza">Glisează spre stânga pentru celelalte ecrane →</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <p class="numar"><i>05</i> Trei lucruri care rămân ale tale</p>
     <h2>Nu se închid la finalul celor 8 săptămâni</h2>
     <p class="intro">Cursul se termină. Instrumentele nu.</p>
 
@@ -493,7 +594,8 @@ body{padding-bottom:88px;}
       </li>
       <li>
         <h3>Sistemul „Mese on-the-go”</h3>
-        <p><b>82 de produse reale din magazin</b>, cu poză, preț la zi și valori de pe etichetă. Nu rețete generice, ci exact ce găsești pe raft.</p>
+        <p><b>82 de produse reale din magazin</b>, cu preț și valorile de pe etichetă. Nu rețete generice, ci exact ce găsești pe raft.</p>
+        <div class="tel mese-tel"><img src="img/mese.jpg" alt="Mesele cu prețuri, în Mese on-the-go" width="600" height="1299" loading="lazy"></div>
         <ul class="mini">
           <li><b>98 de mese gata calculate</b>, cu macro și preț socotite automat, de la 2 lei gustarea până la masa completă</li>
           <li><b>Planul zilei pe cifrele tale</b>: pui greutatea, sportul și tipul de zi, iar sistemul îți compune ziua întreagă</li>
@@ -507,7 +609,7 @@ body{padding-bottom:88px;}
       </li>
       <li>
         <h3>Cele 7 ghiduri</h3>
-        <p>Scrise simplu, de citit în 10 minute fiecare. Le descarcă și îi rămân pe telefon, inclusiv peste doi ani.</p>
+        <p>Scrise simplu, de citit în 10 minute fiecare. Le descarci și îți rămân pe telefon, inclusiv peste doi ani.</p>
         <span class="ramane">Rămâne pe viață</span>
       </li>
     </ul>
@@ -516,11 +618,11 @@ body{padding-bottom:88px;}
 
 <section>
   <div class="container">
-    <p class="numar"><i>05</i> Ce știe să facă la final</p>
+    <p class="numar"><i>06</i> Ce știi să faci la final</p>
     <h2>Semnele că a mers</h2>
     <ul class="bife">
       <li>Îți faci singur farfuria, fără să întrebi pe nimeni.</li>
-      <li>Știi ce mănânci înainte de competiție și ce după.</li>
+      <li>Știi ce mănânci înainte de meci și ce după.</li>
       <li>Îți pregătești pachetul pentru serviciu în 5 minute.</li>
       <li>Citești o etichetă și înțelegi ce scrie pe ea.</li>
       <li>Știi cât trebuie să bei într-o zi grea.</li>
@@ -533,9 +635,9 @@ body{padding-bottom:88px;}
 <section>
   <div class="container">
     <div class="registru">
-      <p class="numar"><i>06</i> După absolvire</p>
+      <p class="numar"><i>07</i> După absolvire</p>
       <h2>Registrul Sportivilor</h2>
-      <p>Când termină cele 8 săptămâni, intră în Registrul Sportivilor. Instrumentele rămân deschise, iar progresul lui rămâne urmărit și după ce se încheie grupa.</p>
+      <p>Când termini cele 8 săptămâni, intri în Registrul Sportivilor. Instrumentele rămân deschise, iar progresul tău rămâne urmărit și după ce se încheie grupa.</p>
       <p>Nu e o listă de nume. E felul în care ținem legătura cu sportivii care au trecut pe aici.</p>
       <p class="citat">Un sportiv educat nu ar trebui să fie un lux.</p>
     </div>
@@ -544,8 +646,8 @@ body{padding-bottom:88px;}
 
 <section id="pret">
   <div class="container">
-    <p class="numar"><i>07</i> Cât costă și ce primești</p>
-    <h2>200 de euro, totul inclus</h2>
+    <p class="numar"><i>08</i> Cât costă și ce primești</p>
+    <h2>Un singur preț, totul inclus</h2>
 
     <div class="pret-cutie">
       <div class="pret-sus">
@@ -560,7 +662,8 @@ body{padding-bottom:88px;}
       <div class="pret-jos">
         <h3>În preț intră</h3>
         <ul class="bife">
-          <li><b>Aplicația de sportivi</b><i>Fotografiază farfuria, primește răspuns. Aceeași aplicație pe care o folosesc sportivi de top din România și de nivel internațional, aceeași experiență.</i></li>
+          <li><b>Aplicația de sportivi</b><i>Fotografiezi farfuria, primești răspuns. Aceeași aplicație pe care o folosesc sportivi de top din România și de nivel internațional, aceeași experiență.</i></li>
+          <li><b>Academia online</b><i>Capitolele, lecțiile și video-urile cu specialiști, în ritmul tău.</i></li>
           <li><b>4 seminarii live</b><i>Întrebări în direct. Se înregistrează.</i></li>
           <li><b>2 masterclass cu invitați</b><i>Alergare corectă și prevenția accidentărilor.</i></li>
           <li><b>Grup de WhatsApp</b><i>Pentru orice întrebare, suport, motivație, educație și aplicare.</i></li>
@@ -580,11 +683,11 @@ body{padding-bottom:88px;}
 
 <section>
   <div class="container">
-    <p class="numar"><i>08</i> Întrebări frecvente</p>
+    <p class="numar"><i>09</i> Întrebări frecvente</p>
 
     <details>
-      <summary>Contează ce sport fac?</summary>
-      <p>Nu. Fotbal, alergare, ciclism, înot, handbal, tenis, arte marțiale, sală. Principiile sunt aceleași, iar cifrele se calculează pe sportul tău și pe cât te antrenezi.</p>
+      <summary>E doar pentru fotbaliști?</summary>
+      <p>Da. Grupa asta e dedicată fotbaliștilor de peste 18 ani, de orice nivel. Cifrele se calculează pe greutatea ta și pe cât te antrenezi.</p>
     </details>
     <details>
       <summary>Trebuie să fiu sportiv de performanță?</summary>
@@ -617,28 +720,5 @@ body{padding-bottom:88px;}
   </div>
 </section>
 
-<section>
-  <div class="container">
-    <div class="despre">
-      <h3>Cine ține programul</h3>
-      <p>Fabius Antal. Lucrez cu fotbaliști profesioniști și cu atleți olimpici.</p>
-      <p>Aceleași principii, așezate pe programul unui adult care are și serviciu, nu doar antrenamente.</p>
-    </div>
-  </div>
-</section>
-
-<div class="final">
-  <div class="container">
-    <p class="numar"><i>09</i> Înscriere</p>
-    <h2>Intră în grup și vorbim acolo</h2>
-    <p style="margin-bottom:22px;">În grup afli tot: cum se desfășoară, ce primești și cum se face înscrierea. Îmi zici ce sport faci, de câte ori pe săptămână te antrenezi și cum mănânci acum. Dacă văd că nu ai ce să câștigi, îți spun direct.</p>
-
-    <div class="butoane">
-      <a class="btn" href="https://chat.whatsapp.com/EShE6ytwomaGuFqb94dWLn">Intră în grupul de WhatsApp</a>
-    </div>
-  </div>
-</div>
-
-<div class="bara"><a href="https://chat.whatsapp.com/EShE6ytwomaGuFqb94dWLn">Intră în grup · 200 €</a></div>
 </body>
 </html>
